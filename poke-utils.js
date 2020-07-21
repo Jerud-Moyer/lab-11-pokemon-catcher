@@ -6,3 +6,30 @@ export function getRandomPokemon(pokeArray) {
     return pokeArray[randomPokemon]; 
     
 }
+
+export function findById(someArray, someId) {
+    const someNumber = Number(someId);
+    let item = null;
+    for (let i = 0; i < someArray.length; i ++) {
+        if (someArray[i].id === someNumber){
+            item = someArray[i];
+        }
+    }
+    return item;
+}
+
+/*export function encounteredPokemon(id) {
+    let encountered = findById(id, pokemonEncountered);
+    if (encountered) {
+        encountered.encounters ++;
+
+    } else {
+        const newEncounter = {
+            _id: id,
+            encounters: 1,
+            caught: 0
+        };
+        pokemonEncountered.push(newEncounter);
+    }
+
+}*/ 
