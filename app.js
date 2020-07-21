@@ -59,8 +59,8 @@ setPage();
 input1.addEventListener('click', (e) => {
     if ((e.target.value) === input1.pokemon) {
     
-        //if (input1) {
-           // pokemonCaptured.push(input1.pokemon);
+        if (input1) {
+            pokemonCaptured.push(input1.pokemon);
 
             console.log(pokemonCaptured);
         }
