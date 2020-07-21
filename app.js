@@ -2,7 +2,7 @@
 import { getRandomPokemon } from '/poke-utils.js';
 import pokeArray from '/data/pokemon.js';
 const pokeDisplay = document.querySelectorAll('label');
-const pokeRadio = document.querySelectorAll('input');
+//const pokeRadio = document.querySelectorAll('input');
 const selectButton = document.getElementById('select');
 
 const firstPoke = pokeDisplay[0];
@@ -36,7 +36,6 @@ function setPage() {
         randoPick3 = getRandomPokemon(pokeArray);
     }
     
-    //const firstPoke = pokeDisplay[0];
     const img1 = firstPoke.children[1];
     img1.src = randoPick.url_image;
     firstPoke.children[2].textContent = randoPick.pokemon;
@@ -57,10 +56,13 @@ function setPage() {
 
 setPage();
 
-pokeRadio.addEventListener('click', () => {
+input1.addEventListener('click', (e) => {
+    if ((e.target.value) === input1.pokemon) {
     
-    if (input1 === 'checked') {
-        firstPoke.push(pokemonCaptured);
+        //if (input1) {
+           // pokemonCaptured.push(input1.pokemon);
 
-    console.log(pokemonCaptured);}
+            console.log(pokemonCaptured);
+        }
+    }
 });
