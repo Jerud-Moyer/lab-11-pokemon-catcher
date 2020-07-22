@@ -1,6 +1,6 @@
 import { getPoke } from '../poke-utils.js';
 import { mungeNames, mungeCaptured, mungeEncountered } from './mung-utils.js';
-//esLint.disable
+/*eslint-disable*/
 const deckPics = document.querySelector('header');
 
 const pokeId1 = deckPics.children[0];
@@ -29,8 +29,6 @@ pokeId10.textContent = pokeArray[9].name + '! times encountered - ' + pokeArray[
 
 const names = mungeNames(pokeArray);
 const captures = mungeCaptured(pokeArray);
-console.log(captures);
-console.log(names);
 const encounters = mungeEncountered(pokeArray);
 
 

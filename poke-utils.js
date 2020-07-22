@@ -1,4 +1,4 @@
-//import pokeArray from '/data/pokemon.js';
+
 
 
 export function getRandomPokemon(pokeArray) {
