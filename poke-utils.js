@@ -18,18 +18,4 @@ export function findById(someArray, someId) {
     return item;
 }
 
-/*export function encounteredPokemon(id) {
-    let encountered = findById(id, pokemonEncountered);
-    if (encountered) {
-        encountered.encounters ++;
-
-    } else {
-        const newEncounter = {
-            _id: id,
-            encounters: 1,
-            caught: 0
-        };
-        pokemonEncountered.push(newEncounter);
-    }
-
-}*/ 
+ 
