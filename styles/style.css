@@ -119,14 +119,35 @@ footer {
   }
 
   img {
-      height: 25%;
-      width: 25%;
+      height: 55%;
+      width: 55%;
+      cursor: pointer;
   }
 
   button {
       visibility: hidden;
+      cursor: pointer;
   }
 
   #poke-window {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: yellowgreen;
       visibility: visible;
+      border: solid darkslateblue 5px;
+      border-radius: 15px;
+      height: 75%;
+  }
+
+  header {
+      font-size: 30px;
+      color:darkslateblue;
+      display: flex;
+      justify-content: center;
+  }
+
+  input {
+      visibility: hidden;
   }
