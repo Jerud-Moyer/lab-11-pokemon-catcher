@@ -9,10 +9,12 @@ main {
 header {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 50%;
-    width: 80%;
+    width: 90%;
+    
 }
 
 body {
@@ -21,11 +23,28 @@ body {
 }
 
 span {
-    margin: 10px;
-    border: solid darkslateblue 2px;
+    margin: 15px;
+    border: solid darkslateblue 3px;
     border-radius: 10px;
     padding: 5px;
-    width: 60%;
-    height: 100%;
+    width: 100px;
+    height: 150px;
+    font-size: 18px;
+    box-shadow: 5px 10px  darkslategray;
 
 }
+
+#chart {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive; 
+    font-size: 75px;
+}
+
+

@@ -6,6 +6,7 @@ import pokeArray from '/data/pokemon.js';
 const pokeDisplay = document.querySelectorAll('label');
 const pokeRadio = document.querySelectorAll('input');
 const statBar = document.getElementById('message-span');
+const statBar2 = document.getElementById('message-span-b');
 const resultButton = document.getElementById('select');
 const pokeWindow = document.getElementById('poke-window');
 
@@ -63,10 +64,11 @@ function setPage() {
     encounteredPokemon(randoPick3);
     
 
-    statBar.textContent = `You have selected ${cardsChosen} Pokeymen!`;
+    statBar.textContent = `You have caught ${cardsChosen} Pokeymen!`;
 
     if (cardsChosen === 10) {
-        statBar.textContent = `great job, you have caught 10 POKEYMEN! Now you gotta check'em all!`;
+        statBar.textContent = `great job, you have caught 10 POKEYMEN!`;
+        statBar2.textContent = `Now you gotta check 'em all!`;
         resultButton.style.visibility = 'visible';
         pokeWindow.style.visibility = 'hidden';
         
