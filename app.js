@@ -60,7 +60,7 @@ function setPage() {
     encounteredPokemon(randoPick);
     encounteredPokemon(randoPick2);
     encounteredPokemon(randoPick3);
-    console.log(pokemonEncountered);
+    
 
     statBar.textContent = `You have selected ${cardsChosen} Pokeymen!`;
 
