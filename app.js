@@ -5,6 +5,8 @@ import pokeArray from '/data/pokemon.js';
 const pokeDisplay = document.querySelectorAll('label');
 const pokeRadio = document.querySelectorAll('input');
 const statBar = document.getElementById('message-span');
+const resultButton = document.getElementById('select');
+const pokeWindow = document.getElementById('poke-window');
 
 
 const firstPoke = pokeDisplay[0];
@@ -23,9 +25,7 @@ const input3 = thirdPoke.children[0];
  //initialize state
 let pokemonEncountered = [];
 let cardsChosen = 0;
-//let captures = 0;
-//let pokemonCaptured = [];
-//let notCaptured = [];
+
  //set event listeners to update state and DOM
 
 
@@ -62,7 +62,13 @@ function setPage() {
     encounteredPokemon(randoPick3);
     console.log(pokemonEncountered);
 
-    statBar.textContent = 
+    statBar.textContent = `You have selected ${cardsChosen} Pokeymen!`;
+
+    if (cardsChosen === 10) {
+        statBar.textContent = `great job, you have caught 10 POKEYMEN! Now you gotta check'em all!`;
+        resultButton.style.visibility = 'visible';
+        pokeWindow.style.visibility = 'hidden';
+    }
 
     
 
@@ -94,11 +100,9 @@ function encounteredPokemon(randoObject) {
 setPage();
 
 pokeRadio[0].addEventListener('click', (e) => {
-    console.log(e.target.value);
-    
     let captured = findById(pokemonEncountered, e.target.value);
     captured.caught ++;
-    cardsChosen + 1;
+    cardsChosen ++;
     setPage();
     
 
@@ -108,7 +112,7 @@ pokeRadio[0].addEventListener('click', (e) => {
 pokeRadio[1].addEventListener('click', (e) => {
     let captured = findById(pokemonEncountered, e.target.value);
     captured.caught ++;
-    cardsChosen + 1;
+    cardsChosen ++;
     setPage();
     
 
@@ -116,9 +120,9 @@ pokeRadio[1].addEventListener('click', (e) => {
 
 
 pokeRadio[2].addEventListener('click', (e) => {
-    let captured = findById(e.target.value, pokemonEncountered);
+    let captured = findById(pokemonEncountered, e.target.value);
     captured.caught ++;
-    cardsChosen + 1;
+    cardsChosen ++;
     setPage();
     
 

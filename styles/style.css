@@ -122,3 +122,11 @@ footer {
       height: 25%;
       width: 25%;
   }
+
+  button {
+      visibility: hidden;
+  }
+
+  #poke-window {
+      visibility: visible;
+  }
