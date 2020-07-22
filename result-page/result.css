@@ -11,8 +11,8 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-    width: 15%;
+    height: 50%;
+    width: 80%;
 }
 
 body {
@@ -25,5 +25,7 @@ span {
     border: solid darkslateblue 2px;
     border-radius: 10px;
     padding: 5px;
-    
+    width: 60%;
+    height: 100%;
+
 }
