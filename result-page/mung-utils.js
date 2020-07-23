@@ -1,3 +1,6 @@
+import massArray from '../data/pokemon.js';
+import { findById } from '../poke-utils.js';
+
 export function mungeNames(pokeArray) {
     const names = [];
     for (let i = 0; i < pokeArray.length; i++) {
@@ -26,4 +29,13 @@ export function mungeEncountered(pokeArray) {
 
     }
     return encounters;
+}
+
+export function mungeData(pokeArray, property) {
+    const type = [];
+    for (let i = 0; i < pokeArray.length; i++) {
+        const pokemon = findById(massArray, pokeArray[i].id);
+        type.push(pokemon[property]);
+    }
+    return type;
 }
