@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
-    <title>Document</title>
+    <title>PokeyMan</title>
 </head>
 
 <body>
     <header>
+        <h1 id="top">Catch 'em all!</h1>
+        <h3>(or maybe just ten)</h3>
         <h1 id="message-span"></h1>
+        <h1 id="message-span-b"></h1>
         
     </header>
     <main>
+        <Button id="select">See your POKEYMEN!</Button>
         <section id="poke-window" class="main-section">
             <label class="what">
                 <input type="radio" name="pokemon" value="randoPick" checked/>
@@ -35,7 +40,6 @@
                 <span></span>
             </label>
        </section>
-       <Button id="select">See your POKEYMEN!</Button>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
